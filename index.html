@@ -12,11 +12,19 @@
         import { getFirestore, doc, setDoc, getDoc, collection, getDocs } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
         // Initialize Firebase
-        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {
+            apiKey: "AIzaSyCqc2f3mxV9tIqaSimur4mGOsHIxsWNN8A",
+            authDomain: "zenithurl-e9909.firebaseapp.com",
+            projectId: "zenithurl-e9909",
+            storageBucket: "zenithurl-e9909.firebasestorage.app",
+            messagingSenderId: "7083366833",
+            appId: "1:7083366833:web:120e13ed18b75f57f30590",
+            measurementId: "G-J1GCM16JV2"
+        };
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
         const db = getFirestore(app);
-        const appId = typeof __app_id !== 'undefined' ? __app_id : 'my-custom-archive';
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'zenithurl-e9909';
 
         // UI Elements
         const uploadSection = document.getElementById('upload-section');
